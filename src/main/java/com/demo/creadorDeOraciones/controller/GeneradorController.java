@@ -22,8 +22,9 @@ public class GeneradorController {
 	public ResponseEntity generar() {
 		try {
 			Oraciones oracion = new Oraciones();
+			Oraciones respuesta = new Oraciones();
 			
-			String respuesta = oracion.generarNueva();
+			respuesta.setNombre(oracion.generarNueva());
 			
 			return ResponseEntity.ok(respuesta);
 		}
